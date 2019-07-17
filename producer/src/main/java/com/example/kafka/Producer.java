@@ -16,11 +16,10 @@ public class Producer {
 
     private static Logger logger = Logger.getLogger(Producer.class);
 
-
     @Autowired
     private KafkaTemplate<?, String> kafkaTemplate;
 
-    @Scheduled(fixedDelay = 5000)
+    @Scheduled(fixedDelay = 1000)
     public void send() {
         System.out.println("生产者 :{}"+
                 "gaha_hero" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
